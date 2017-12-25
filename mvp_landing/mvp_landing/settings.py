@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+# /home/sabbir/venv
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -83,5 +83,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 '''TEMPLATE Location'''
 TEMPLATE_DIRS = (
-    '/home/sabbir/venv/static/templates',
+    '/home/sabbir/venv/django1.6/mvp_landing/static/templates',
 )
+
+if DEBUG:
+    MEDIA_URL = '/media/'
+    STATIC_ROOT= '/home/sabbir/venv/django1.6/mvp_landing/static/static-only'
+    MEDIA_ROOT = '/home/sabbir/venv/django1.6/mvp_landing/static/media'
+    STATICFILES_DIRS = (
+        '/home/sabbir/venv/django1.6/mvp_landing/static/static/',
+    )

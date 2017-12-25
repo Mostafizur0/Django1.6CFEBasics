@@ -1,4 +1,5 @@
 from django.contrib import admin
+#from django.contrib.staticfiles
 
 # Register your models here.
 from .models import SignUp
