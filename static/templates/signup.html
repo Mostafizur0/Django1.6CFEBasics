@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-  <html>
-    <head>
-    </head>
-    <body>
-      <h1>Sign up!</h1>
-    </body>
-  </html>
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Join now!</h1>
+<form method="POST" action=""> {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit">
+</form>
+{% endblock %}
